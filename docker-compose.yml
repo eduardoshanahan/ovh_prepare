@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+
+  shell:
+    image: eduardoshanahan/ovh_prepare:latest
+    container_name: es_openssh
+    volumes:
+      - type: bind
+        source: ./keys
+        target: /root/.ssh/
+    entrypoint:
+      - /bin/sh
+
