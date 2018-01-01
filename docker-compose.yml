@@ -5,10 +5,15 @@ services:
   shell:
     image: eduardoshanahan/ovh_prepare:latest
     container_name: es_openssh
+    env_file: .env
     volumes:
       - type: bind
-        source: ./keys
+        source: $HOST_KEYS_DIRECTORY
         target: /root/.ssh/
+      - type: bind
+        source: ./scripts
+        target: /scripts
+    working_dir: /scripts
     entrypoint:
       - /bin/sh
 

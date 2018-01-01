@@ -1,4 +1,4 @@
-FROM eduardoshanahan/fabric:1.14.0.2
+FROM eduardoshanahan/fabric:1.14.0.5
 
 LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
 
